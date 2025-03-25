@@ -70,8 +70,8 @@ nextQueens coords  = do
 -- as a proxy for search quality
 
 -- baseline: just a random board
-prop_measure_attacks_baseline :: Int -> Property
-prop_measure_attacks_baseline iters
+prop_measure_attacks_baseline :: Property
+prop_measure_attacks_baseline 
   = forAll (genQueens 8) $ \qs -> collect (attacks qs) True
 
 -- solve using bounded Hill Climbing
@@ -262,7 +262,7 @@ main = hspec $ do
       property (prop_measure_attacks_sa 10000)
       
   describe "Euro coins changes" $ do
-    it "no change using naive generator (wrong)" $
+    it "no change using naive generator" $
       property (prop_make_change_baseline 137)
     it "find change using targeted generator (hill climbing)" $
       property (prop_make_change_hc 137)
