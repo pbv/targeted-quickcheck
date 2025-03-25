@@ -1,7 +1,7 @@
 
 # Targeted-QuickCheck
 
-Target generators for QuickCheck, based on the ISSTA'17 paper
+Targeted generators for QuickCheck, based on the ISSTA'17 paper
 "Targeted Property-Based Testing" by Andreas Löscher and
 Konstantino Sogonas.
 
